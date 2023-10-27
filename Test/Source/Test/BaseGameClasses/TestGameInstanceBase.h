@@ -26,9 +26,4 @@ protected:
 	UTestObjectConnectionAPIBase* TestObjectConnectionAPIBase;
 	UFUNCTION()
 	void OnHandleCheckAuthHttpResponse(int ResponseCode);
-	UPROPERTY()
-	FTimerHandle Timer;
-	UFUNCTION()
-	void CheckController();
-	int Response;
 };

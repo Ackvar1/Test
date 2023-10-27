@@ -17,14 +17,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_16_SPARSE_DATA
 #define FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execCheckController); \
 	DECLARE_FUNCTION(execOnHandleCheckAuthHttpResponse); \
 	DECLARE_FUNCTION(execOnHandleHttpResponse);
 
 
 #define FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execCheckController); \
 	DECLARE_FUNCTION(execOnHandleCheckAuthHttpResponse); \
 	DECLARE_FUNCTION(execOnHandleHttpResponse);
 

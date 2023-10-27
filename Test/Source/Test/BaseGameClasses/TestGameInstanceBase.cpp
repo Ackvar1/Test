@@ -28,16 +28,11 @@ void UTestGameInstanceBase::OnHandleHttpResponse()
 void UTestGameInstanceBase::OnHandleCheckAuthHttpResponse(int ResponseCode)
 {
 	TestObjectConnectionAPIBase->OnHandleLoginHttpResponseDelegate.RemoveDynamic(this, &UTestGameInstanceBase::OnHandleHttpResponse);
-	Response = ResponseCode;
-	GetTimerManager().SetTimer(Timer, this, &UTestGameInstanceBase::CheckController, 1, true, 0);
-}
-
-void UTestGameInstanceBase::CheckController()
-{
 	if (ATestPlayerControllerBase* PlayerController = Cast<ATestPlayerControllerBase>(GetWorld()->GetFirstPlayerController()))
 	{
-		GetTimerManager().ClearTimer(Timer);
-		GetTimerManager().PauseTimer(Timer);
-		PlayerController->CreateWidget(Response);
+		
+		PlayerController->CreateWidget(ResponseCode);
 	}
 }
+
+

@@ -6,24 +6,15 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Test/BaseGameClasses/TestGameInstanceBase.h"
-#include "../../Source/Runtime/Engine/Classes/Engine/TimerHandle.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
-	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 	TEST_API UClass* Z_Construct_UClass_UTestGameInstanceBase();
 	TEST_API UClass* Z_Construct_UClass_UTestGameInstanceBase_NoRegister();
 	TEST_API UClass* Z_Construct_UClass_UTestObjectConnectionAPIBase_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Test();
 // End Cross Module References
-	DEFINE_FUNCTION(UTestGameInstanceBase::execCheckController)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->CheckController();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(UTestGameInstanceBase::execOnHandleCheckAuthHttpResponse)
 	{
 		P_GET_PROPERTY(FIntProperty,Z_Param_ResponseCode);
@@ -43,33 +34,10 @@ void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 	{
 		UClass* Class = UTestGameInstanceBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "CheckController", &UTestGameInstanceBase::execCheckController },
 			{ "OnHandleCheckAuthHttpResponse", &UTestGameInstanceBase::execOnHandleCheckAuthHttpResponse },
 			{ "OnHandleHttpResponse", &UTestGameInstanceBase::execOnHandleHttpResponse },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "BaseGameClasses/TestGameInstanceBase.h" },
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTestGameInstanceBase, nullptr, "CheckController", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UTestGameInstanceBase_CheckController()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UTestGameInstanceBase_CheckController_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UTestGameInstanceBase_OnHandleCheckAuthHttpResponse_Statics
 	{
@@ -141,10 +109,6 @@ void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TestObjectConnectionAPIBase_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_TestObjectConnectionAPIBase;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_Timer_MetaData[];
-#endif
-		static const UECodeGen_Private::FStructPropertyParams NewProp_Timer;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -154,7 +118,6 @@ void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Test,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UTestGameInstanceBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UTestGameInstanceBase_CheckController, "CheckController" }, // 4169374474
 		{ &Z_Construct_UFunction_UTestGameInstanceBase_OnHandleCheckAuthHttpResponse, "OnHandleCheckAuthHttpResponse" }, // 1161029002
 		{ &Z_Construct_UFunction_UTestGameInstanceBase_OnHandleHttpResponse, "OnHandleHttpResponse" }, // 1777732789
 	};
@@ -171,15 +134,8 @@ void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_TestObjectConnectionAPIBase = { "TestObjectConnectionAPIBase", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UTestGameInstanceBase, TestObjectConnectionAPIBase), Z_Construct_UClass_UTestObjectConnectionAPIBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_TestObjectConnectionAPIBase_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_TestObjectConnectionAPIBase_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_Timer_MetaData[] = {
-		{ "ModuleRelativePath", "BaseGameClasses/TestGameInstanceBase.h" },
-	};
-#endif
-	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_Timer = { "Timer", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(UTestGameInstanceBase, Timer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_Timer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_Timer_MetaData)) }; // 3633724737
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTestGameInstanceBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_TestObjectConnectionAPIBase,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTestGameInstanceBase_Statics::NewProp_Timer,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UTestGameInstanceBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTestGameInstanceBase>::IsAbstract,
@@ -218,9 +174,9 @@ void EmptyLinkFunctionForGeneratedCodeTestGameInstanceBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UTestGameInstanceBase, UTestGameInstanceBase::StaticClass, TEXT("UTestGameInstanceBase"), &Z_Registration_Info_UClass_UTestGameInstanceBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTestGameInstanceBase), 1992154351U) },
+		{ Z_Construct_UClass_UTestGameInstanceBase, UTestGameInstanceBase::StaticClass, TEXT("UTestGameInstanceBase"), &Z_Registration_Info_UClass_UTestGameInstanceBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTestGameInstanceBase), 1739475262U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_429976897(TEXT("/Script/Test"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_2070835825(TEXT("/Script/Test"),
 		Z_CompiledInDeferFile_FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ackvar1_Desktop_Test_Test_Source_Test_BaseGameClasses_TestGameInstanceBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
