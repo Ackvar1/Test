@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Test",
+			"Path": "/Users/ackvar1/Desktop/Test/Test/Source/Test.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TestEditor",
+			"Path": "/Users/ackvar1/Desktop/Test/Test/Source/TestEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
